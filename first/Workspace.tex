@@ -1,0 +1,327 @@
+\documentclass[UTF8]{uofa-eng-assignment}
+
+\usepackage{lipsum}
+\usepackage{CTEX}
+\newcommand*{\name}{\kaishu  杨澍}
+\newcommand*{\id}{202218019427012}
+\newcommand*{\course}{\kaishu 矩阵论}
+\newcommand*{\assignment}{First Assignment}
+
+\begin{document}
+
+\maketitle
+
+\begin{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%
+\item \textbf{Question 1.1.4:}
+%%%%%%%%%%%%%%%%%%%%
+
+\textbf{Solve:}
+
+因为$$cos2t=2cos^2t-1$$
+即$$cos2t-2cos^2t+1=0$$
+故$$cos2t,2cos^2t,1$$线性相关
+%%%%%%%%%%%%%%%%%%%%
+\item \textbf{Question 1.1.7:}
+%%%%%%%%%%%%%%%%%%%%
+
+\textbf{Solve}
+
+
+(1)因为$$x_1+2x_2=y_3$$
+$$x_2+2x_3=y_4$$
+$$y_1+2y_2=x_3$$
+$$y_2+2y_3=x_4$$
+所以过渡矩阵为
+$$\left[
+\begin{matrix}
+    4&-2&1&0\\
+    8&-4&2&1\\
+    1&0&0&2\\
+    -2&1&0&0\\
+\end{matrix}\right]
+$$
+(2)
+$$x=2y_1-y_2+y_3+y_4$$
+即在基（\uppercase\expandafter{\romannumeral2}）坐标为
+$$\left[
+\begin{matrix}
+    2&-1&1&1
+\end{matrix}\right]^T
+$$
+所以在基（\uppercase\expandafter{\romannumeral1}）坐标为
+$$
+\begin{aligned}
+x&=
+\left[
+\begin{matrix}
+    4&8&1&-2\\
+    -2&-4&0&1\\
+    1&2&0&0\\
+    0&1&2&0\\
+\end{matrix}\right]
+\left[
+\begin{matrix}
+    2&-1&1&1
+\end{matrix}\right]^T\\
+&=\left[
+    \begin{matrix}
+        11&23&4&-5
+    \end{matrix}\right]^T
+\end{aligned}
+$$
+%%%%%%%%%%%%%%%%%%%%
+\item \textbf{Question 1.1.11:}
+%%%%%%%%%%%%%%%%%%%%
+
+
+\textbf{Solve}
+$$V_1\cap V_2$$的子空间应同时满足
+$$
+\left\{
+\begin{aligned}
+\varepsilon_1+\varepsilon_2+\varepsilon_3+\varepsilon_4 &=0\\
+\varepsilon_1-\varepsilon_2+\varepsilon_3-\varepsilon_4 &=0
+\end{aligned}
+\right.
+$$
+解得其一组基为
+$$(1,0,-1,0)^T,(0,1,0,-1)^T$$
+%%%%%%%%%%%%%%%%%%%%
+\item \textbf{Question 1.1.12:}
+%%%%%%%%%%%%%%%%%%%%
+\textbf{Solve}
+(1)
+对$$x,y\in V$$有
+$$x_11+x_22=0$$
+$$y_11+y_22=0$$
+所以
+$$(x_11+y_11)+(x_22+y_22)=0$$
+$$x+y\in V$$
+同时，对$k\in R$有
+$$k(x_11+x_22)=0$$
+即
+$$kx \in V$$
+且有$$0^{2\times2}\in V$$
+所以V为$R^{2\times 2}$的子空间
+(2)
+V的一个基为
+$$
+\left[
+\begin{matrix}
+    1&0\\
+    0&-1\\
+\end{matrix}\right],
+\left[
+\begin{matrix}
+    0&1\\
+    0&0\\
+\end{matrix}\right],
+\left[
+\begin{matrix}
+    0&0\\
+    1&0\\
+\end{matrix}\right]
+$$
+所以V的维数为3.
+%%%%%%%%%%%%%%%%%%%%
+\item \textbf{Question 1.2.7:}
+%%%%%%%%%%%%%%%%%%%%
+\textbf{Solve}
+先计算基2到基1的过渡矩阵
+$$C^{-1}=\left[
+    \begin{matrix}
+        -1&0&1\\
+        1&1&0\\
+        1&2&1\\
+    \end{matrix}\right]
+$$
+由此可以计算T在基2下的矩阵为
+$$
+B=C^{-1}AC=\left[
+    \begin{matrix}
+        -1&1&-2\\
+        2&2&0\\
+        3&0&2\\
+    \end{matrix}\right]
+$$
+%%%%%%%%%%%%%%%%%%%%
+\item \textbf{Question 1.2.14:}
+%%%%%%%%%%%%%%%%%%%%
+\textbf{Solve}
+矩阵A的特征多项式为
+$$det(\lambda I-A)=(\lambda-1 )(\lambda+1)(\lambda)-(\lambda-1 )=\lambda^3-2\lambda+1=0
+$$
+所以
+$$A^3-2A+1=0$$
+$$
+\begin{aligned}
+    &2A^9-3A^5+A^4+A^2-4I\\
+    &=24A^2-37A+10I\\
+    &=\left[
+        \begin{matrix}
+            -3&48&-26\\
+            0&95&-61\\
+            0&-61&34\\
+        \end{matrix}\right]
+\end{aligned}    
+$$
+%%%%%%%%%%%%%%%%%%%%
+\item \textbf{Question 1.2.16:}
+%%%%%%%%%%%%%%%%%%%%
+\textbf{Solve}
+矩阵A的特征多项式为
+$$det(\lambda I-A)=(\lambda-9)(\lambda+9)^2=\lambda^3+9\lambda^2-81\lambda-729$$
+由H-K定理得最小多项式为
+$$(\lambda-9)(\lambda+9)$$
+%%%%%%%%%%%%%%%%%%%%
+\item \textbf{Question 1.2.18:}
+%%%%%%%%%%%%%%%%%%%%
+\textbf{Solve}
+因为$\lambda_0$为$T_1$特征值所以
+$$T_1x=\lambda_0 x $$
+$$
+\begin{aligned}
+    T_1T_2x&=T_2 \lambda_0 x\\
+    &=\lambda_0(T_2x)
+\end{aligned}
+$$
+即$T_2x \in V_\lambda0$
+所以$V_\lambda0$为$T_2$不变子空间
+%%%%%%%%%%%%%%%%%%%%
+\item \textbf{Question 1.2.19:}
+%%%%%%%%%%%%%%%%%%%%
+\textbf{Solve}
+$$det(\lambda I-A)=(\lambda-1)(\lambda-2)(\lambda+1)$$
+所以若当标准型为
+$$
+\left[
+        \begin{matrix}
+            1&0&0\\
+            0&2&0\\
+            0&0&-1\\
+        \end{matrix}\right]
+$$
+%%%%%%%%%%%%%%%%%%%%
+\item \textbf{Question 1.3.7:}
+%%%%%%%%%%%%%%%%%%%%
+\textbf{Solve}
+先证充分性，若$x_1......x_n$线性相关,则有
+$$\sum{k_ix_i}=0$$
+使之与$x_m$做内积得
+$$\sum{k_i(x_i,x_m)}=0$$
+故detB=0
+再证必要性,
+由detB!=0可知,
+$$\sum{k_i(x_i,x_m)}=0$$
+即$x_1......x_n$线性无关。
+%%%%%%%%%%%%%%%%%%%%
+\item \textbf{Question 1.3.9:}
+%%%%%%%%%%%%%%%%%%%%
+$$
+\begin{aligned}
+    (Tx,Tx)&=(x-2(y,x)y,x-2(y,x)y)\\
+    &=(x,x)-4(y,x)(x,y)+4(y,x)(y,x)(y,y)\\
+    &=(x,x)
+\end{aligned}
+$$
+所以为正交变换。
+%%%%%%%%%%%%%%%%%%%%
+\item \textbf{Question 1.3.11:}
+%%%%%%%%%%%%%%%%%%%%
+\textbf{Solve}
+先求得该矩阵的特征值
+$$det(\lambda I-A)=0$$
+解得$$\lambda_1=0,\lambda_2=\sqrt{2},\lambda_3=-\sqrt{2}$$
+对应的特征向量为
+$$
+x_1=(0,\frac{i}{\sqrt{2}},\frac{1}{\sqrt{2}})^T,
+x_2=(\frac{1}{\sqrt{2}},-\frac{i}{2},\frac{1}{2} )^T,
+x_3=(-\frac{1}{\sqrt{2}},-\frac{i}{2},\frac{1}{2} )^T 
+$$
+所以可求得
+$$P=(x_1,x_2,x3)$$
+%%%%%%%%%%%%%%%%%%%%
+\item \textbf{Question 1.3.15:}
+%%%%%%%%%%%%%%%%%%%%
+\textbf{Solve}
+(1)其中的一个标准正交基为
+$$
+X_1=\left[
+        \begin{matrix}
+            1&0\\
+            0&1\\
+        \end{matrix}\right],
+X_2=\left[
+        \begin{matrix}
+            0&1\\
+            1&0\\
+        \end{matrix}\right],
+$$
+且$X_1\odot X_2=0$所以这是一对正交基,将他们标准化得标准正交基为
+$$
+a_1=\left[
+        \begin{matrix}
+            \frac{1}{\sqrt{2}}&0\\
+            0&\frac{1}{\sqrt{2}}\\
+        \end{matrix}\right],
+a_2=\left[
+        \begin{matrix}
+            0&\frac{1}{\sqrt{2}}\\
+            \frac{1}{\sqrt{2}}&0\\
+        \end{matrix}\right],
+$$
+(2)
+$$
+\begin{aligned}
+    \left\langle TX,Y \right\rangle&=\left\langle XP+X^T,Y \right\rangle\\
+    &=\left\langle XP,Y \right\rangle+\left\langle X^T,Y \right\rangle
+    &=\left\langle X,Y \right\rangle P+\left\langle X,Y^T \right\rangle
+    = \left\langle X,TY \right\rangle
+\end{aligned}
+$$
+所以为对称变换。
+
+
+(3)
+$$T[a_1,a_2]=[a_1,a_2]A$$
+由此可以求得T在基$(a_1,a_2)$下的矩阵
+$$
+A=\left[
+        \begin{matrix}
+            1&1\\
+            1&1\\
+\end{matrix}\right]
+$$
+设C为基$(a_1,a_2)$到目标基$(b_1,b_2)$的过渡矩阵
+则对所要求的基下T对应的矩阵B应满足
+$$B=C^{-1}AC$$
+即
+$$A=CBC^{-1}$$且B为对角阵,即A可进行特征值分解得到B
+解得
+$$
+\lambda_1=2,\lambda_2=0
+$$
+$$
+C=\left[
+        \begin{matrix}
+            \frac{1}{\sqrt{2}}&\frac{1}{\sqrt{2}}\\
+            \frac{1}{\sqrt{2}}&-\frac{1}{\sqrt{2}}\\
+\end{matrix}\right]
+$$
+由此可以得到
+$$
+b_1=\left[
+        \begin{matrix}
+            \frac{1}{2}&\frac{1}{2}\\
+            \frac{1}{2}&\frac{1}{2}\\
+        \end{matrix}\right],
+b_2=\left[
+        \begin{matrix}
+            \frac{1}{2}&-\frac{1}{2}\\
+            -\frac{1}{2}&\frac{1}{2}\\
+        \end{matrix}\right],
+$$
+\end{enumerate}
+\end{document}
